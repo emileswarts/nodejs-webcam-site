@@ -9,6 +9,7 @@ class HomeController extends SocketController
 	initEventListener:->
 		super
 
+
 		$(".my-image").click (event) =>
 			# get image which was clicked
 			img = event.target
@@ -38,6 +39,7 @@ class HomeController extends SocketController
 		@see: http://www.w3.org/TR/html5/the-canvas-element.html
 		###
 		data = canvas.toDataURL "image/jpeg"
+
 
 		#return data
 		data
