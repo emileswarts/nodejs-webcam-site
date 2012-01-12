@@ -6,6 +6,14 @@
 var express = require('express');
 
 var app = module.exports = express.createServer();
+var io = require('sockets.io').listen(80);
+
+io.sockets.on('connection', function (socket) {
+		socket.emit('news', { hello: 'world' });
+		socket.on('my other event', function (data) {
+			console.log(data);
+			});
+		});
 
 // Configuration
 
