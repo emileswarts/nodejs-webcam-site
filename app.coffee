@@ -33,7 +33,7 @@ class Server
 			@app.get "/application.js", @package.createServer()
 
 	runApp:->
-		@app.listen 8080, =>
+		@app.listen 8888, =>
 			addr = @app.address()
 			console.log 'app listening on http://' + addr.address + ':' + addr.port
 

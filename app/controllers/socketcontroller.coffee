@@ -10,7 +10,7 @@ class SocketController
 
 	initAndConnect:->
 		#connect socket
-		@socket = io.connect( 'http://' + window.location.hostname + ':8080');
+		@socket = io.connect( 'http://' + window.location.hostname + ':80');
 
 	initEventListener:->
 		@socket.on 'connect', ->

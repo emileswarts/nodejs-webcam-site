@@ -14,7 +14,7 @@ Installation
 	npm install .
 	coffee app.coffee
 
-2) Open Browser and point to [http://localhost:8080/](http://localhost:8080/) Follow the instructions.
+2) Open Browser and point to [http://localhost:8888/](http://localhost:8888/) Follow the instructions.
 
 @Author
 ===
