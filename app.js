@@ -2,21 +2,13 @@
 /**
  * Module dependencies.
  */
-
 var express = require('express');
-
 var app = module.exports = express.createServer();
-var io = require('sockets.io').listen(80);
-
-io.sockets.on('connection', function (socket) {
-		socket.emit('news', { hello: 'world' });
-		socket.on('my other event', function (data) {
-			console.log(data);
-			});
-		});
+var io = require('socket.io').listen(app);
 
 // Configuration
 
+/*io.sockets.on()*/
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
@@ -40,18 +32,6 @@ app.configure('production', function(){
 app.get('/', function(req, res){
   res.render('index', {
     title: 'Home'
-  });
-});
-
-app.get('/about', function(req, res){
-  res.render('about', {
-    title: 'About'
-  });
-});
-
-app.get('/contact', function(req, res){
-  res.render('contact', {
-    title: 'Contact'
   });
 });
 
