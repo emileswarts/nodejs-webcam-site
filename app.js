@@ -50,6 +50,6 @@ app.get('/contact', function(req, res){
 // Only listen on $ node app.js
 
 if (!module.parent) {
-  app.listen(9451);
+  app.listen(8888);
   console.log("Express server listening on port %d", app.address().port);
 }
