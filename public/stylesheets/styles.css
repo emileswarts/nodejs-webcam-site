@@ -6,9 +6,9 @@ p {
 }
 body {
   font: 1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #888;
+  color: #fff;
   font-weight: normal;
-  background-color: #000000;
+  background-color: #000;
 }
 ::-moz-selection {
   background: #000;
@@ -22,20 +22,19 @@ body {
 }
 a {
   text-decoration: underline;
-  color: #888;
+  color: #fff;
 }
 a:hover {
   color: #6495ed;
 }
 .content {
-  width: 500px;
   margin: 0 auto;
-  padding: -1em 0;
+  padding: 0 0;
   text-align: center;
-  background: #000000;
+  background: #000;
 }
 .content ol {
-  padding: 0 1em;
+  padding: 0 2em;
   margin: 0;
 }
 .content ol li {
@@ -85,6 +84,6 @@ header,
 header a,
 footer,
 footer a {
-  text-shadow: #fff 1px 1px 1px;
+  text-shadow: #000 1px 1px 1px;
   text-align: center;
 }

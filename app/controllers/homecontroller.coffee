@@ -9,7 +9,7 @@ class HomeController extends SocketController
 	initEventListener:->
 		super
 
-		$(".my-image").click (event) =>
+		$(".my-image").load (event) =>
 			img = event.target
 			imgdata = @getBase64Image(img)
 			@socket.emit 'onimgdata', {  width: img.width, height: img.height, source:imgdata }
