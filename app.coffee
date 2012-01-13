@@ -65,6 +65,4 @@ class Server
 				__dirname + '/lib/jquery-1.7.1.min.js'
 			]
 
-
-# create server instance
 server = new Server()

@@ -11,11 +11,11 @@ class ShowImageController extends SocketController
 
 		#listener to showimgdata
 		@socket.on 'showimgdata', (data) ->
-			#get image
-			img = $('#show-img').get 0
+			#img = $('#show-img').get 0
+			img = "<img src='images/webcam.jpeg' />" 
+
 			message
 			try
-				# set data for image
 				img.width = data.width;
 				img.height = data.height;
 				img.src = data.source;
@@ -27,7 +27,12 @@ class ShowImageController extends SocketController
 				message = 'error receiving image data...'
 
 
-			$('#info').text(message)
+			setInterval ->
+				cacherandom = Math.floor(Math.random()*100)*10+Math.random() 
+				cachevar = "?cache=" + cacherandom
+				myimg = "images/webcam.jpeg" + cachevar
+				$('#show-img').attr 'src',  myimg
+			, 	4000
 
 
 module.exports = ShowImageController

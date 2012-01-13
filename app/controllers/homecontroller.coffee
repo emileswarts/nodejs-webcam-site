@@ -9,7 +9,6 @@ class HomeController extends SocketController
 	initEventListener:->
 		super
 
-
 		$(".my-image").click (event) =>
 			img = event.target
 			imgdata = @getBase64Image(img)
